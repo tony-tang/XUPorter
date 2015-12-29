@@ -47,7 +47,8 @@ namespace UnityEditor.XCodeEditor
 			{ ".strings", "text.plist.strings" },
 			{ ".bundle", "wrapper.plug-in" },
 			{ ".dylib", "compiled.mach-o.dylib" },			
-			{ ".json", "text.json" }
+			{ ".json", "text.json" },
+			{ ".tbd", "sourcecode.text-based-dylib-definition"}
    		 };
 		
 		public static readonly Dictionary<string, string> typePhases = new Dictionary<string, string> {
@@ -57,6 +58,7 @@ namespace UnityEditor.XCodeEditor
 			{ ".c", "PBXSourcesBuildPhase" },
 			{ ".cpp", "PBXSourcesBuildPhase" },
 			{ ".framework", "PBXFrameworksBuildPhase" },
+			{ ".tbd", "PBXFrameworksBuildPhase" },
 			{ ".h", null },
 			{ ".pch", null },
 			{ ".icns", "PBXResourcesBuildPhase" },

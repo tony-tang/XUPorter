@@ -723,7 +723,13 @@ namespace UnityEditor.XCodeEditor
 			foreach( string framework in mod.frameworks ) {
 				string[] filename = framework.Split( ':' );
 				bool isWeak = ( filename.Length > 1 ) ? true : false;
-				string completePath = System.IO.Path.Combine( "System/Library/Frameworks", filename[0] );
+				string completePath;
+				if (filename [0].EndsWith (".tbd", System.StringComparison.OrdinalIgnoreCase)) {
+					completePath = System.IO.Path.Combine( "usr/lib", filename[0] );
+				} else {
+					completePath = System.IO.Path.Combine ("System/Library/Frameworks", filename [0]);
+				}
+
 				this.AddFile( completePath, frameworkGroup, "SDKROOT", true, isWeak );
 			}
 
