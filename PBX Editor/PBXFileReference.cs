@@ -75,7 +75,8 @@ namespace UnityEditor.XCodeEditor
 			{ ".xib", "PBXResourcesBuildPhase" },
 			{ ".strings", "PBXResourcesBuildPhase" },
 			{ ".bundle", "PBXResourcesBuildPhase" },
-			{ ".dylib", "PBXFrameworksBuildPhase" }
+			{ ".dylib", "PBXFrameworksBuildPhase" },
+			{ ".tbd", "PBXFrameworksBuildPhase" }
     	};
 		
 		public PBXFileReference( string guid, PBXDictionary dictionary ) : base( guid, dictionary )
